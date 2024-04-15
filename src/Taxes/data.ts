@@ -7,5 +7,5 @@ export const taxes = new Map<[number, number], number>([
   [[27_146, 39_791], 37],
   [[39_791, 51_997], 43.5],
   [[51_997, 81_199], 45],
-  [[81_199, Number.MAX_SAFE_INTEGER], 45],
+  [[81_199, Number.MAX_SAFE_INTEGER], 48],
 ]);

@@ -7,7 +7,7 @@ const config = {
     require('postcss-sorting'),
     postcssPresetEnv({
       features: {
-        'nesting-rules': false,
+        'nesting-rules': true,
       },
     }),
   ],

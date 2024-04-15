@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          { loader: 'style-loader', options: { injectType: 'autoStyleTag' } },
+          { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {

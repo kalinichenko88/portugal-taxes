@@ -7,7 +7,7 @@ module.exports = {
   target: 'web',
   entry: './src/index.tsx',
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -28,9 +28,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        exclude: /module\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.css$/i,
+        use: [
+          { loader: 'style-loader', options: { injectType: 'autoStyleTag' } },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
       },
     ],
   },

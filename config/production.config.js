@@ -1,24 +1,29 @@
 const path = require('node:path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
-  entry: './src/index.tsx',
+  entry: {
+    app: './src/index.tsx',
+  },
+  devtool: 'source-map',
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css'],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'app.js',
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].[contenthash:8].js',
+    clean: true,
+    asyncChunks: true,
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-    compress: true,
-    port: 3000,
+  optimization: {
+    minimize: true,
+    splitChunks: false,
+    minimizer: [new CssMinimizerPlugin()],
   },
   module: {
     rules: [
@@ -30,7 +35,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          { loader: 'style-loader' },
+          { loader: MiniCssExtractPlugin.loader },
           {
             loader: 'css-loader',
             options: {
@@ -46,6 +51,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Taxes',
       template: 'public/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash:8].css',
     }),
   ],
 };

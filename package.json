@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "webpack serve --mode development",
+    "dev": "webpack serve --config config/development.config.js",
+    "build": "webpack build --config config/production.config.js",
+    "serve": "npx serve dist",
     "lint:js": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,8 +32,10 @@
     "@types/react-dom": "^18.2.25",
     "autoprefixer": "^10.4.19",
     "css-loader": "^7.1.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
     "eslint": "^9.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.1",
     "postcss": "^8.4.38",
     "postcss-autoreset": "^3.1.0",
     "postcss-load-config": "^5.0.3",

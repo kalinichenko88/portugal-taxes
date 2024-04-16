@@ -1,11 +1,22 @@
 body {
+    --background-bg: var(--arc-palette-background, #fff);
+    --title-color: var(--arc-palette-title, #000);
+
     font-family: Arial, sans-serif;
     font-size: 1rem;
     margin:0;
     padding: 2rem;
     display: block;
+    background: var(--background-bg);
 }
 
 #root {
     min-height: 100vh;
+}
+
+h1 {
+    color: var(--title-color);
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
 }

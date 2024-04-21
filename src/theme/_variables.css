@@ -1,0 +1,5 @@
+:root {
+    --background-bg: var(--arc-palette-background, #fff);
+
+    --secondary-bg: var(--arc-palette-foregroundSecondary, #f0f0f0);
+}

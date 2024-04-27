@@ -1,5 +1,9 @@
 :root {
     --background-bg: var(--arc-palette-background, #fff);
 
-    --secondary-bg: var(--arc-palette-foregroundSecondary, #f0f0f0);
+    --secondary-color: var(--arc-palette-foregroundSecondary, #f0f0f0);
+    --info-color: #1f8dd6;
+
+    --base-radius: 3px;
+
 }

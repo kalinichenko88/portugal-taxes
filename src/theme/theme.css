@@ -4,16 +4,15 @@
 body {
     --title-color: var(--arc-palette-title, #000);
 
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: .01em;
     font-size: 1rem;
     margin:0;
-    padding-right: 2rem;
+    padding: 0;
     display: block;
     height: 100vh;
     background: var(--background-bg);
 }
-
-
 
 h1 {
     color: var(--title-color);

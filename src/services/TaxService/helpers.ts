@@ -1,29 +1,16 @@
 import { round } from '@helpers/round';
 
-import { taxes } from './data';
+import { irsRates } from './data';
+import type { IRSResult } from './models/IRSResult';
 
-type RangeTax = {
-  taxRange: [number, number];
-  taxableIncome: number;
-  percent: number;
-  withheld: number;
-  restRange: number;
-};
-
-type Result = {
-  ranges: RangeTax[];
-  withheld: number;
-  balance: number;
-};
-
-export const calculate = (income: number): Result => {
-  const result: Result = {
+export const calculateIRS = (income: number): IRSResult => {
+  const result: IRSResult = {
     ranges: [],
     withheld: 0,
     balance: 0,
   };
 
-  for (const [[from, to], percent] of taxes.entries()) {
+  for (const [[from, to], percent] of irsRates.entries()) {
     if (income < from) {
       break;
     }

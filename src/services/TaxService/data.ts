@@ -1,4 +1,4 @@
-export const taxes = new Map<[number, number], number>([
+export const irsRates = new Map<[number, number], number>([
   [[0, 7_703], 13.25],
   [[7_703, 11_623], 18],
   [[11_623, 16_472], 23],

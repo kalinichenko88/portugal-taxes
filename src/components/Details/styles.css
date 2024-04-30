@@ -1,0 +1,10 @@
+.details {
+    display: flex;
+    align-items: center;
+
+    > .wrapper {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid red;
+    }
+}

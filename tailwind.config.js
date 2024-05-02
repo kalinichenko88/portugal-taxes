@@ -10,7 +10,6 @@ module.exports = {
         DEFAULT: '1rem',
       },
     },
-    extend: {},
     // colors: {
     //   transparent: 'transparent',
     //   current: 'currentColor',
@@ -27,9 +26,9 @@ module.exports = {
     // },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
-  // daisyui: {
-  //   darkTheme: 'dracula',
-  //   lightTheme: 'autumn',
-  //   themes: ['autumn', 'dracula'],
-  // },
+  daisyui: {
+    darkTheme: 'dracula',
+    lightTheme: 'autumn',
+    themes: ['autumn', 'dracula'],
+  },
 };

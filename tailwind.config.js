@@ -1,6 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{tsx,css}', './public/index.html'],
   theme: {
@@ -10,25 +10,23 @@ module.exports = {
         DEFAULT: '1rem',
       },
     },
-    // colors: {
-    //   transparent: 'transparent',
-    //   current: 'currentColor',
-    //   black: colors.black,
-    //   white: colors.white,
-    //   gray: colors.gray,
-    //   emerald: colors.emerald,
-    //   indigo: colors.indigo,
-    //   yellow: colors.yellow,
-    // },
-    // colors: {
-    //   white: '#ccc',
-    //   info: '#3490dc',
-    // },
+    colors: {
+      current: colors.currentColor,
+      white: colors.white,
+      black: colors.white,
+      transparent: colors.transparent,
+
+      background: '#f9f4ef',
+      button: '#8c7851',
+      buttonText: '#fffffe',
+      headline: '#020826',
+      paragraph: '#716040',
+
+      secondary: '#eaddcf',
+      main: '#fffffe',
+      highlight: '#8c7851',
+      danger: '#f25042',
+    },
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-  daisyui: {
-    darkTheme: 'dracula',
-    lightTheme: 'autumn',
-    themes: ['autumn', 'dracula'],
-  },
+  plugins: [],
 };

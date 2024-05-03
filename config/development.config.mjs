@@ -1,8 +1,12 @@
-const path = require('node:path');
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
   mode: 'development',
   target: 'web',
   devtool: 'eval',
@@ -10,7 +14,7 @@ module.exports = {
     app: './src/index.tsx',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.css'],
+    extensions: ['.tsx', '.ts', '.js', '.css', '.svg'],
     alias: {
       '@helpers': path.resolve(__dirname, '../src/helpers'),
       '@services': path.resolve(__dirname, '../src/services'),

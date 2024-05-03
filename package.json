@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "webpack serve --config config/development.config.js",
-    "build": "webpack build --config config/production.config.js",
+    "dev": "webpack serve --config config/development.config.mjs",
+    "build": "webpack build --config config/production.config.mjs",
     "serve": "npx serve dist",
     "lint:js": "eslint src",
     "test": "find ./src -name '*.test.ts' -exec node --loader @swc-node/register/esm --test {} \\;"

@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 html, body {
-    @apply h-full w-full bg-gray-100;
+    @apply h-full w-full;
+    @apply bg-background;
+}
+
+.container {
+    @apply flex columns-2 flex-nowrap gap-0 h-full w-full;
+    @apply py-6;
 }

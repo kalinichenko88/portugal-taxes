@@ -1,0 +1,22 @@
+.alert {
+    @apply flex flex-row gap-0.5 items-center justify-around w-full;
+    @apply bg-highlight text-main;
+    @apply py-3 px-2 mb-2;
+    @apply border-2 rounded-2xl shadow-sm;
+
+    > svg {
+        @apply w-9;
+    }
+
+    > p {
+        @apply flex-1;
+    }
+
+    &.alert-info {
+        @apply bg-background text-highlight;
+    }
+
+    &.alert-warning {
+        @apply border-2 border-background;
+    }
+}

@@ -10,13 +10,12 @@ type Props = PropsWithChildren & {
   type?: MessageType;
 };
 
-export const Message: FC<Props> = ({ type, children }) => {
+export const Message: FC<Props> = ({ type = MessageType.INFO, children }) => {
   return (
     <aside
       role="alert"
-      className={clsx('alert', {
+      className={clsx('alert', 'ease-in-out', 'duration-300', 'hover:scale-[99%]', {
         [`alert-${type}`]: type,
-        // 'text-white': type === MessageType.INFO,
       })}
     >
       <Icon type={type} />

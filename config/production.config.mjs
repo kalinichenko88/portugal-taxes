@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,7 +15,6 @@ export default {
   entry: {
     app: './src/index.tsx',
   },
-  devtool: 'source-map',
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css'],
     alias: {
@@ -31,8 +31,10 @@ export default {
   },
   optimization: {
     minimize: true,
-    splitChunks: false,
-    minimizer: [new CssMinimizerPlugin()],
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   module: {
     rules: [
@@ -55,6 +57,9 @@ export default {
         ],
       },
     ],
+  },
+  cache: {
+    type: 'filesystem',
   },
   plugins: [
     new HtmlWebpackPlugin({

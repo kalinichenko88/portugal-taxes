@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    @apply h-full w-full;
-    @apply bg-background;
-}
+@layer base {
+    html, body {
+        @apply h-max w-full;
+        @apply text-headline;
+        @apply bg-background;
+    }
 
-.container {
-    @apply flex columns-2 flex-nowrap gap-0 h-full w-full;
-    @apply py-6;
+    .container {
+        @apply flex columns-2 flex-wrap gap-4 lg:gap-0 h-full w-full;
+        @apply py-6;
+    }
+
+    hr {
+        @apply w-full;
+        @apply mb-4;
+        @apply border-[1px] border-highlight;
+    }
+
+    h2 {
+        @apply mb-2;
+        @apply font-bold text-lg uppercase;
+    }
+
+    p {
+        @apply mb-2;
+    }
 }

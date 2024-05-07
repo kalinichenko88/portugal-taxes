@@ -1,12 +1,25 @@
-.grid {
-    border: 1px solid tomato;
-    display: grid;
-    column-gap: 1rem;
+.irs {
+    @apply mb-8;
 
     > .header {
-        background-color: tomato;
-        color: white;
-        display: grid;
-        grid-template-columns: 10% 40% 10%;
+        @apply px-4 py-4;
+    }
+}
+
+.table {
+    @apply w-full;
+
+    > :nth-child(odd) {
+        @apply bg-background;
+    }
+
+    & ~ .total {
+        @apply flex flex-row justify-end align-middle items-baseline gap-3;
+        @apply px-4 py-4;
+        @apply font-bold text-headline;
+
+        > .sum {
+            @apply text-xl;
+        }
     }
 }

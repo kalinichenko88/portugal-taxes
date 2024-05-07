@@ -1,18 +1,31 @@
 import { type FC } from 'react';
 
-import { InfoMessages } from './InfoMessages';
-import { InputForm } from './InputForm';
+import { Message, MessageType } from '@components/Message';
+
+import { Form } from './Form';
+import { Taxes } from './Taxes/Taxes';
 
 import './styles.css';
 
 export const Sidebar: FC = () => {
   return (
-    <div className="h-full px-2 py-2 bg-teal-600">
-      <button className="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
-        Button
-      </button>
-      <InfoMessages />
-      <InputForm />
+    <div className="sidebar">
+      <Message type={MessageType.WARNING}>
+        Calculation results from this calculator can only be used for approximate estimation of tax burden in Portugal
+        for self-employed IT specialists working for foreign clients
+      </Message>
+
+      <Message>
+        This calculator will be updated in case any inaccuracies are identified. Feel free to
+        <a href="https://github.com/kalinichenko88/taxes/issues" target="_blank">
+          report an issue
+        </a>
+        .
+      </Message>
+
+      <Form />
+
+      <Taxes />
     </div>
   );
 };

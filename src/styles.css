@@ -38,7 +38,7 @@
         background-size: 20px 30px;
     }
 
-    .item:hover > .dots {
+    div:hover > .dots {
         background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
     }
 

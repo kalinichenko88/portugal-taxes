@@ -1,6 +1,5 @@
 import { type FC } from 'react';
 
-import { useTaxService } from '@services/TaxService';
 import { moneyFormatter, percentFormatter } from '@helpers/formatter';
 
 import './styles.css';
@@ -13,8 +12,6 @@ type Props = {
 
 export const RangeItem: FC<Props> = ({ range, percent, withheld }) => {
   const [from, to] = range;
-  const { income } = useTaxService();
-  const tax = income > from;
 
   const rangeFormatted =
     to === Number.MAX_SAFE_INTEGER ? `From ${moneyFormatter.format(from)}` : moneyFormatter.formatRange(from, to);

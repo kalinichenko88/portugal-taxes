@@ -1,7 +1,19 @@
 import { round } from '@helpers/round';
 
 import { irsRates } from './data';
+import { SOCIAL_TAX, BASE_FOR_SOCIAL_TAX } from './constants';
 import type { IRSResult } from './models/IRSResult';
+
+export const calculateSocial = (income: number): number => {
+  const base = (income * BASE_FOR_SOCIAL_TAX) / 100;
+  const socialTax = (base * SOCIAL_TAX) / 100;
+
+  if (socialTax < 0) {
+    throw new Error('Social tax cannot be negative');
+  }
+
+  return socialTax;
+};
 
 export const calculateIRS = (income: number): IRSResult => {
   const result: IRSResult = {

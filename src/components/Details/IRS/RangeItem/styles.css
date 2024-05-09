@@ -8,24 +8,17 @@
     }
 
     > .percent {
-        @apply w-2/12;
+        @apply w-1/12;
         @apply text-center;
     }
 
     > .dots {
-        @apply flex-1;
-
-        &::before {
-            content: '   ';
-            background-image: radial-gradient(circle, #000 1px, transparent 1px);
-            background-size: 20px 20px;
-            @apply w-2 h-2;
-            @apply bg-background;
-            @apply rounded-full;
-        }
+        @apply flex-auto;
+        @apply px-1;
     }
 
-    > .dots {
-
+    > .sum {
+        @apply w-[13%];
+        @apply text-end;
     }
 }

@@ -29,3 +29,17 @@
         @apply mb-2;
     }
 }
+
+@layer components {
+
+    .dots {
+        background-image: radial-gradient(circle, #8c7851 1px, transparent 1px);
+        background-position: center;
+        background-size: 20px 30px;
+    }
+
+    .item:hover > .dots {
+        background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+    }
+
+}

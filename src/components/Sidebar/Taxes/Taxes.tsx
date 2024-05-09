@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { useTaxService } from '@services/TaxService';
+import { useTaxService, SOCIAL_TAX } from '@services/TaxService';
 import { moneyFormatter } from '@helpers/formatter';
 
 export const Taxes: FC = () => {
@@ -10,7 +10,7 @@ export const Taxes: FC = () => {
     <div>
       <h2>1. Social Security (Segurança Social)</h2>
       <p>
-        <b>21.4%</b> of <b>70%</b> of the annual income.
+        <b>{SOCIAL_TAX}%</b> of <b>70%</b> of the annual income.
       </p>
 
       {socialResult && (

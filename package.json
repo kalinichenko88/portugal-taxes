@@ -1,7 +1,7 @@
 {
-  "name": "taxes",
+  "name": "portugal-taxes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portugal taxes calculator\n\n",
   "scripts": {
     "dev": "webpack serve --config config/development.config.mjs",
     "build": "webpack build --config config/production.config.mjs",
@@ -13,8 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/kalinichenko88/taxes.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Ivan Kalinichenko <joker.bsg@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kalinichenko88/taxes/issues"

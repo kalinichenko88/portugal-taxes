@@ -21,7 +21,8 @@ export const IRS: FC = () => {
         <h2>IRS</h2>
 
         <Message>
-          The first year there is a <b>50%</b> discount on personal income tax (IRS), and in the second year there is a
+          The first year there is a <b>50%</b> discount on personal income tax (IRS), and in the second year there is
+          a&nbsp;
           <b>25%</b> discount.
         </Message>
       </div>

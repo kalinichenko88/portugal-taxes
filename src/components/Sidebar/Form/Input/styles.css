@@ -1,0 +1,32 @@
+.input {
+    @apply w-3/6;
+
+    > label {
+        @apply flex flex-row flex-wrap gap-0.5 items-center justify-center;
+        @apply border border-highlight rounded-lg shadow-sm hover:shadow-md has-[:focus]:shadow-md has-[input.has-error]:border-danger;
+        @apply text-lg;
+        @apply px-2 py-2;
+        @apply bg-main;
+
+        &.has-error {
+            @apply border-danger;
+        }
+
+        > svg {
+            @apply mr-2;
+            @apply text-headline;
+        }
+
+        > input {
+            @apply flex-1;
+            @apply w-full;
+            @apply bg-transparent text-headline;
+            @apply outline-none appearance-none;
+        }
+    }
+}
+
+.hint {
+    @apply ml-1;
+    @apply text-xs;
+}

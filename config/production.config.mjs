@@ -63,7 +63,7 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Taxes',
+      title: 'Portugal taxes calculator',
       template: 'public/index.html',
     }),
     new MiniCssExtractPlugin({

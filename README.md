@@ -11,6 +11,10 @@ offering an approximate estimation based on provided inputs.
 1. `npm install` to install dependencies
 2. `npm run dev` to run the application in development mode
 
+## Requirements
+
+- Node.js 20.0.0 or higher
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.

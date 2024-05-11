@@ -1,7 +1,6 @@
 {
   "name": "portugal-taxes",
-  "version": "1.0.0",
-  "description": "Portugal taxes calculator\n\n",
+  "description": "Portugal taxes calculator",
   "scripts": {
     "dev": "webpack serve --config config/development.config.mjs",
     "build": "webpack build --config config/production.config.mjs",

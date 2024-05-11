@@ -10,6 +10,7 @@ const config = {
         'nesting-rules': false,
       },
     }),
+    require('postcss-combine-duplicated-selectors'),
   ],
 };
 

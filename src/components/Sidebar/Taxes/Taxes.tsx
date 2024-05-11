@@ -4,7 +4,9 @@ import { useTaxService, SOCIAL_TAX } from '@services/TaxService';
 import { moneyFormatter } from '@helpers/formatter';
 
 export const Taxes: FC = () => {
-  const { socialResult, irsResult, totalResult } = useTaxService();
+  const { socialResult, irsResult, totalResult, income } = useTaxService();
+
+  const positiveIncome = income > 0;
 
   return (
     <div>
@@ -13,7 +15,7 @@ export const Taxes: FC = () => {
         <b>{SOCIAL_TAX}%</b> of <b>70%</b> of the annual income.
       </p>
 
-      {socialResult && (
+      {socialResult && positiveIncome && (
         <>
           <p>
             Tax base is <span className="calculated">{moneyFormatter.format(socialResult.base)}.</span>
@@ -26,10 +28,14 @@ export const Taxes: FC = () => {
         </>
       )}
 
-      <hr />
-      <h2>2. Income Taxes (IRS)</h2>
+      {positiveIncome && (
+        <>
+          <hr />
+          <h2>2. Income Taxes (IRS)</h2>
+        </>
+      )}
 
-      {irsResult && (
+      {irsResult && positiveIncome && (
         <>
           <p>
             Tax base is <span className="calculated">{moneyFormatter.format(irsResult.base)}</span>
@@ -44,12 +50,16 @@ export const Taxes: FC = () => {
         </>
       )}
 
-      <hr />
+      {positiveIncome && (
+        <>
+          <hr />
 
-      <h2>3. Total Taxes</h2>
-      <p>The total amount of taxes is the sum of Social Security and Income Taxes.</p>
+          <h2>3. Total Taxes</h2>
+          <p>The total amount of taxes is the sum of Social Security and Income Taxes.</p>
+        </>
+      )}
 
-      {totalResult && (
+      {totalResult && positiveIncome && (
         <>
           <div className="result">
             <span>-{moneyFormatter.format(totalResult.withheld)}</span>

@@ -26,6 +26,10 @@ export const TaxService: FC<PropsWithChildren> = ({ children }) => {
   const [totalResult, setTotalResult] = useState<TotalResult | undefined>();
 
   useEffect(() => {
+    if (income === 0) {
+      return;
+    }
+
     const socialResult = calculateSocial(income);
     const irsResult = calculateIRS(socialResult.restRange);
     const totalResult = calculateTotal(income, socialResult, irsResult);

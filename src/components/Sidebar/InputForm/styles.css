@@ -1,8 +1,0 @@
-input {
-    box-shadow: var(--arc-palette-focus, tan);
-    width: 30%;
-    background: white;
-    font-size: 24px;
-    padding: 5px 20px;
-    border-radius: 10px;
-}

@@ -14,7 +14,7 @@ export default {
     app: './src/index.tsx',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.css', '.svg'],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
     alias: {
       '@helpers': path.resolve(__dirname, '../src/helpers'),
       '@services': path.resolve(__dirname, '../src/services'),

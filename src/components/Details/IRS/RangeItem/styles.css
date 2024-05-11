@@ -1,6 +1,6 @@
 .item {
     @apply flex flex-row gap-x-2;
-    @apply p-2.5;
+    @apply px-5 py-2.5;
     @apply transition-colors duration-200 ease-in-out hover:!bg-button hover:text-white;
 
     > .range {

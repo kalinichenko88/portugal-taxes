@@ -18,7 +18,7 @@ export const Taxes: FC = () => {
       {socialResult && positiveIncome && (
         <>
           <p>
-            Tax base is <span className="calculated">{moneyFormatter.format(socialResult.base)}.</span>
+            Tax base is <span className="calculated">{moneyFormatter.format(socialResult.base)}</span>
           </p>
 
           <div className="result">

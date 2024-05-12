@@ -41,8 +41,9 @@ export const Input: FC = () => {
           value={state}
           onChange={handleChange}
         />
+        <span>per year</span>
       </label>
-      <span className="hint">Set income sum</span>
+      <span className="hint">Set annual income</span>
     </div>
   );
 };

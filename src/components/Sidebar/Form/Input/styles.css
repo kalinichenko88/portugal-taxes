@@ -1,5 +1,5 @@
 .input {
-    @apply w-3/6;
+    @apply w-3/6 sm:w-4/12 md:w-3/6 lg:w-8/12 xl:w-4/12 2xl:w-3/12;
 
     > label {
         @apply flex flex-row flex-wrap gap-0.5 items-center justify-center;
@@ -22,6 +22,11 @@
             @apply w-full;
             @apply bg-transparent text-headline;
             @apply outline-none appearance-none;
+        }
+
+        > span {
+            @apply text-sm;
+            @apply text-headline;
         }
     }
 }

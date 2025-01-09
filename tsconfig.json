@@ -10,6 +10,11 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Node",
     "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "ES2020",
+      "ESNext"
+    ],
     "baseUrl": "./",
     "paths": {
       "@helpers/*": ["src/helpers/*"],
